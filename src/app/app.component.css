@@ -5,3 +5,12 @@
     background-repeat : no-repeat;
     background-size: cover;
 } */
+.stick-top{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.align{
+    position: fixed;
+    top: 70px;
+}
