@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LeftMenuComponent } from './components/left-menu/left-menu.component';
 import { NaviComponent } from './components/navi/navi.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -14,11 +16,13 @@ import { NaviComponent } from './components/navi/navi.component';
     AppComponent,
     NaviComponent,
     LeftMenuComponent,
+    LoginComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     
   ],
   providers: [],
