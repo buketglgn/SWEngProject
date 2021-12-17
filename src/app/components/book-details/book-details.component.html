@@ -1,0 +1,25 @@
+<div *ngIf="message; else noMessage">
+   
+    <app-books></app-books>
+
+</div>
+
+<ng-template #noMessage>
+    <h1>mesajjj detay sayfa=> {{message}}</h1>
+    <div class="card mb-3" style="max-width: 740px; height: 400px;" >
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+             class="img-fluid rounded-start" alt="..." width="300px" height="300px">
+          </div>
+          <div class="col-md-8" *ngFor="let book of books">
+            <div class="card-body" *ngIf="checkId(book.id)">
+              <h5 class="card-title">Card title=> {{book.id}}--{{book.title}} </h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div> 
+        </div>
+      </div>
+       
+</ng-template>

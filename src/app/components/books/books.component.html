@@ -1,24 +1,20 @@
 <div>
-<input [(ngModel)]="filterText" class="form-control form-control-dark" type="text"
-placeholder="Search" aria-label="Search" ></div>
-<div class="row">
 
-      <!-- <div class="alert alert-danger" role="alert">
-        Bu category de ürün yoktur
-      </div> -->
-      
-      
-  
+<div class="row">
+  <h1>data1=>{{message}}</h1>
     <div  class="card" style="width: 15rem; height:auto" 
-    *ngFor="let book of books | searchBook:filterText">
+    *ngFor="let book of books | searchBook:message">
       <img class="card-img-top" src="https://media.istockphoto.com/photos/row-of-books-on-a-shelf-multicolored-book-spines-stack-in-the-picture-id1222550815" 
       alt="..." style="height: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Book id: {{book.id}}</h5>
-        <p class="card-text">{{book.title}}</p>
-        <p class="card-text" *ngFor="let author of book.authors"><b>YAZAR</b>=>> {{author.name}}</p>
-  
-        <a  href="#" class="btn btn-primary">Oku</a>
+
+        <h5 class="card-title"  >Book id: {{book.id}}</h5>
+        <p class="card-text" ><b>Kitap Adı: </b>{{book.title}}</p>
+        <p class="card-text" *ngFor="let author of book.authors"><b>YAZAR :</b> {{author.name}}</p>
+       <div class="row">
+       <div class="col-md"> <a  href="https://www.gutenberg.org/ebooks/{{book.id}}.html.images" target="blank" class="btn btn-outline-success">Oku</a></div>
+      <div class="col-md"> <button onclick="resetMessage()" routerLink="/bookDetail/{{book.id}}"  class="btn btn-outline-success" >Detay</button></div></div>
       </div>
+
     </div>
   </div>

@@ -12,9 +12,12 @@
      aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- <input [(ngModel)]="filterText" class="form-control form-control-dark w-100" type="text"
-     placeholder="Search" aria-label="Search"> -->
-     
+    <div>
+     <input id="textfil" style="width: 500px;" [(ngModel)]="filterText" class="form-control form-control-dark" type="text"
+    placeholder="Search" aria-label="Search" >
+    
+ </div>
+     <button onclick="document.getElementById('textfil').value = ''" class="btn btn-outline-success" type="submit"(click)="newMessage()" routerLink="">Search</button>
     <div class="navbar-nav">
       <div class="nav-item text-nowrap">
         <a href="#" >
