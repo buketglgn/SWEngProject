@@ -6,6 +6,8 @@
       <tr>
         <th scope="col">Book Number</th>
         <th scope="col">Title</th>
+        <th scope="col">Yazar</th>
+        <th scope="col">Konu</th>
         <th scope="col">Oku</th>
         <th scope="col">Favoriden Kaldır</th>
         
@@ -16,7 +18,9 @@
       <tr>
         <th >{{bookFav.book.id}}</th>
         <th>{{bookFav.book.title}}</th>
-        <td><a href="{{bookFav.book.url}}">Oku</a></td>
+        <th>{{bookFav.book.authors}}</th>
+        <th>{{bookFav.book.subjects}}</th>
+        <td><a href="{{bookFav.book.url}}" target="blank">Oku</a></td>
         <td><button (click)="deleteFavBook(bookFav.book.id)"><img src="assets/icons/delete.svg" /></button> </td>
         <td ></td>
         

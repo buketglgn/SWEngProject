@@ -54,7 +54,10 @@ export class UserFavBooksComponent implements OnInit {
     this.userFavBooksService.RemoveFromFavourites(bookid).subscribe(response=>{
       this.toastrService.info("Favorilerden Kaldırıldı.") 
        window.location.reload();
-    })
+    },(responseError)=>{
+      this.toastrService.error(responseError.error.errors);
+      console.log(responseError.error.errors)
+    });
   
     
   }

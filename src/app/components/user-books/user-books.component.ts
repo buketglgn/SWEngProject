@@ -37,7 +37,10 @@ export class UserBooksComponent implements OnInit {
     this.userFavBooksService.deleteFromUserBooks(bookid).subscribe(response=>{
       this.toastrService.info("Kaldırıldı.") 
        window.location.reload();
-    })
+    },(responseError)=>{
+      this.toastrService.error(responseError.error.errors);
+      console.log(responseError.error.errors)
+    });
   
     
   }

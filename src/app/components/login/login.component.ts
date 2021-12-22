@@ -40,7 +40,10 @@ export class LoginComponent implements OnInit {
         console.log(response)
         localStorage.setItem("token",response.token)
         
-      })
+      },(responseError)=>{
+        this.toastrService.error(responseError.error.errors);
+        console.log(responseError.error.errors)
+      });
     }
 
   }

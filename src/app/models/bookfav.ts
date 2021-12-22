@@ -4,6 +4,6 @@ export interface Bookfav{
     id:number;
     url:string
     title:string
-    authors:Author[]
+    authors:string
     subjects:string
 }
