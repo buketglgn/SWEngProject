@@ -40,9 +40,8 @@ export class BooksComponent implements OnInit {
      });
   }
 
-  resetMessage(){
-     this.message=""
-    
+  newMessage(){
+    this.data.changeMessage("")
   }
 
   addToFavBooks(bookid:number){

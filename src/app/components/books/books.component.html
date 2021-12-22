@@ -1,7 +1,7 @@
 <div>
 
 <div class="row">
-  <h1>data1=>{{message}}</h1>
+ 
     <div  class="card" style="width: 15rem; height:auto" 
     *ngFor="let book of books | searchBook:message">
       <img class="card-img-top" src="https://www.gutenberg.org/cache/epub/{{book.id}}/pg{{book.id}}.cover.medium.jpg" 
@@ -13,7 +13,7 @@
         <p class="card-text" *ngFor="let author of book.authors"><b>YAZAR :</b> {{author.name}}</p>
        <div class="row">
        <div class="col-md"> <a  href="https://www.gutenberg.org/ebooks/{{book.id}}.html.images" target="blank" class="btn btn-outline-success">Oku</a></div>
-      <div class="col-md"> <button (click)="resetMessage()" routerLink="/bookDetail/{{book.id}}"  class="btn btn-outline-success" >Detay</button></div></div>
+      <div class="col-md"> <button (click)="newMessage()" routerLink="/bookDetail/{{book.id}}"  class="btn btn-outline-success" >Detay</button></div></div>
       <div class="col-md"> <button (click)="addToFavBooks(2)" class="btn btn-outline-success" >Favori</button></div></div>
        
       </div>
