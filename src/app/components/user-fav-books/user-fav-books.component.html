@@ -1,0 +1,22 @@
+ <h1>FAVORİDEKİ KİTAPLAR GÖSTERİLİYOR</h1>
+
+
+<table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">Book Number</th>
+        <th scope="col">Title</th>
+        <th scope="col">Total Page</th>
+        
+      </tr>
+    </thead>
+    <tbody *ngFor="let bookFav of userFavBookResponseModel ">
+      <tr>
+        <th >{{bookFav.book.id}}</th>
+        <td>{{bookFav.book.title}}</td>
+        <td>{{bookFav.book.totalPage}}</td>
+        
+      </tr>
+      
+    </tbody>
+  </table>

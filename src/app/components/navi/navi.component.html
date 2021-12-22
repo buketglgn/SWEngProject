@@ -6,7 +6,7 @@
    ">
     
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"
-     style="color: cornsilk;">Books</a>
+     style="color: cornsilk;" routerLink="books">Books</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed"
      type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" 
      aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,13 +19,18 @@
  </div>
      <button onclick="document.getElementById('textfil').value = ''" class="btn btn-outline-success" type="submit"(click)="newMessage()" routerLink="">Search</button>
     <div class="navbar-nav">
-      <div class="nav-item text-nowrap">
-        <a href="#" >
-         <img src="assets/icons/signup.svg"/> 
-        </a>
-        <a href="#" >
-          <img src="assets/icons/signin.svg"/> 
-         </a>
+      <div class="nav-item text-nowrap" *ngIf="isAuthentication(); else noAuthentication">
+        
+        <button (click)="logout()" routerLink="/books" >Log Out</button>
       </div>
+      <ng-template #noAuthentication>
+      <div class="nav-item text-nowrap" >
+        <button routerLink="/login">Login</button>
+        <button>Register</button>
+        </div>
+      </ng-template>
+   
+    
+     
     </div>
   </header>

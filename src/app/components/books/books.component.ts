@@ -1,3 +1,5 @@
+import { ToastrService } from 'ngx-toastr';
+import { UserFavBooksService } from './../../services/user-fav-books.service';
 import { DataService } from './../../services/data.service';
 import { Author } from '../../models/author';
 
@@ -22,7 +24,9 @@ export class BooksComponent implements OnInit {
   
 
   constructor(private bookService:BookService,
-    private data: DataService, private router:ActivatedRoute) { }
+    private data: DataService, private router:ActivatedRoute,
+    private userFavBookService:UserFavBooksService,
+    private toastrService:ToastrService) { }
 
   ngOnInit(): void {
     this.data.currentMessage.subscribe(message => this.message = message)
@@ -41,6 +45,13 @@ export class BooksComponent implements OnInit {
     
   }
 
+  addToFavBooks(bookid:number){
+    //let bookfavv= Object.assign({},bookid)
+    this.userFavBookService.addToFavBooks(bookid).subscribe(response=>{
+      this.toastrService.success("Favorilere Eklendi")
+    })
+  }
+ 
 
 
 

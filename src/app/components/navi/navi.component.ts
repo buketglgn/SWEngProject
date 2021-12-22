@@ -1,5 +1,6 @@
 import { DataService } from './../../services/data.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-navi',
@@ -13,7 +14,8 @@ export class NaviComponent implements OnInit {
 
   message:string="";
 
-  constructor(private data:DataService) { }
+  constructor(private data:DataService,
+    private authService:AuthService) { }
 
   ngOnInit(): void {
     this.data.currentMessage.subscribe(message=> this.message = message)
@@ -24,14 +26,20 @@ export class NaviComponent implements OnInit {
     this.data.changeMessage(this.filterText)
   }
 
+  isAuthentication(){
+    if(this.authService.isAuthenticated()){
+      return true
+    }else{
+      return false
+    }
 
+  }
 
+  logout(){
+    localStorage.clear();
+  }
 
-
-
-
-
-  
+ 
   sendMessageToParent(){
     this.sendToParent.emit(this.filterText)
   }
