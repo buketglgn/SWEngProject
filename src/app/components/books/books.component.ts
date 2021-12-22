@@ -1,5 +1,5 @@
 import { ToastrService } from 'ngx-toastr';
-import { UserFavBooksService } from './../../services/user-fav-books.service';
+import { UserFavBooksService } from '../../services/user-books.service';
 import { DataService } from './../../services/data.service';
 import { Author } from '../../models/author';
 
@@ -50,7 +50,12 @@ export class BooksComponent implements OnInit {
       this.toastrService.success("Favorilere Eklendi")
     })
   }
- 
+ addToUserBooks(bookid:number){
+   this.userFavBookService.addToUserBooks(bookid).subscribe(response=>{
+     this.toastrService.success("okunanlara eklendi")
+   })
+   
+ }
 
 
 

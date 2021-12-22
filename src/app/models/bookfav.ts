@@ -1,6 +1,9 @@
+import { Author } from "./author";
+
 export interface Bookfav{
     id:number;
-    totalPage:number;
+    url:string
     title:string
-
+    authors:Author[]
+    subjects:string
 }

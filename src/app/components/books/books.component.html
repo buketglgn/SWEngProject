@@ -12,10 +12,10 @@
         <p class="card-text" ><b>Kitap Adı: </b>{{book.title}}</p>
         <p class="card-text" *ngFor="let author of book.authors"><b>YAZAR :</b> {{author.name}}</p>
        <div class="row">
-       <div class="col-md"> <a  href="https://www.gutenberg.org/ebooks/{{book.id}}.html.images" target="blank" class="btn btn-outline-success">Oku</a></div>
+       <div class="col-md"> <a href="https://www.gutenberg.org/ebooks/{{book.id}}.html.images" (click)="addToUserBooks(book.id)"  target="blank" class="btn btn-outline-success">Oku</a></div>
       <div class="col-md"> <button (click)="newMessage()" routerLink="/bookDetail/{{book.id}}"  class="btn btn-outline-success" >Detay</button></div></div>
-      <div class="col-md"> <button (click)="addToFavBooks(2)" class="btn btn-outline-success" >Favori</button></div></div>
-       
+      <div class="col-md"> <button (click)="addToFavBooks(book.id)" class="btn btn-outline-success" >Favori</button></div></div>
+      
       </div>
 
     </div>

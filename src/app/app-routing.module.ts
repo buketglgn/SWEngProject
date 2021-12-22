@@ -6,6 +6,7 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 
 import { BooksComponent } from './components/books/books.component';
 import { LoginComponent } from './components/login/login.component';
+import { UserBooksComponent } from './components/user-books/user-books.component';
 import { UserFavBooksComponent } from './components/user-fav-books/user-fav-books.component';
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:"login", component:LoginComponent},
   {path:'bookDetail/:id',component:BookDetailsComponent},
   {path:'books/:filterText', component:BooksComponent},
-  {path:'userFavBooks', component:UserFavBooksComponent}
+  {path:'userFavBooks', component:UserFavBooksComponent},
+  {path:'userBooks', component:UserBooksComponent}
 ]
 
 @NgModule({

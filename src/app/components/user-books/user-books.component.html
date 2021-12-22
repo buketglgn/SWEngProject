@@ -1,4 +1,4 @@
- <h1>FAVORİDEKİ KİTAPLAR GÖSTERİLİYOR</h1>
+<h1>OKUNAN KİTAPLAR GÖSTERİLİYOR</h1>
 
 
 <table class="table" >
@@ -7,8 +7,6 @@
         <th scope="col">Book Number</th>
         <th scope="col">Title</th>
         <th scope="col">Oku</th>
-        <th scope="col">Favoriden Kaldır</th>
-        
         
       </tr>
     </thead>
@@ -16,8 +14,8 @@
       <tr>
         <th >{{bookFav.book.id}}</th>
         <th>{{bookFav.book.title}}</th>
-        <td><a href="{{bookFav.book.url}}">Oku</a></td>
-        <td><button (click)="deleteFavBook(bookFav.book.id)"><img src="assets/icons/delete.svg" /></button> </td>
+        <td><a href="{{bookFav.book.url}}">Okumaya Devam Et</a></td>
+        <td><button (click)="deleteUserBook(bookFav.book.id)"><img src="assets/icons/delete.svg" /></button> </td>
         <td ></td>
         
         
