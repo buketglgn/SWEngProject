@@ -31,18 +31,18 @@ export class LoginComponent implements OnInit {
 
   login(){
     if(this.loginForm.valid){
-      console.log(this.loginForm.value);
+      //console.log(this.loginForm.value);
 
       let loginModel=Object.assign({},this.loginForm.value)
 
       this.authService.login(loginModel).subscribe(response=>{
-        this.toastrService.info("Token Olusturuldu.")
-        console.log(response)
+        this.toastrService.info("Giriş Başarılı.")
+        //console.log(response)
         localStorage.setItem("token",response.token)
         
       },(responseError)=>{
         this.toastrService.error(responseError.error.errors);
-        console.log(responseError.error.errors)
+        //console.log(responseError.error.errors)
       });
     }
 

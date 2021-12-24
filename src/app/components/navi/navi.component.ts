@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { DataService } from './../../services/data.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
@@ -15,7 +16,8 @@ export class NaviComponent implements OnInit {
   message:string="";
 
   constructor(private data:DataService,
-    private authService:AuthService) { }
+    private authService:AuthService,
+    private toastrService:ToastrService) { }
 
   ngOnInit(): void {
     this.data.currentMessage.subscribe(message=> this.message = message)
@@ -37,6 +39,7 @@ export class NaviComponent implements OnInit {
 
   logout(){
     localStorage.clear();
+    this.toastrService.info("Çıkış Yapıldı.")
   }
 
  

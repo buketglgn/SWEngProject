@@ -46,7 +46,7 @@ export class UserFavBooksComponent implements OnInit {
       console.log(response)
      },(responseError)=>{
        this.toastrService.error(responseError.error.errors);
-       console.log(responseError.error.errors)
+       //console.log(responseError.error.errors)
      });
   }
 
@@ -56,7 +56,7 @@ export class UserFavBooksComponent implements OnInit {
        window.location.reload();
     },(responseError)=>{
       this.toastrService.error(responseError.error.errors);
-      console.log(responseError.error.errors)
+      //console.log(responseError.error.errors)
     });
   
     

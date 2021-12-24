@@ -6,6 +6,7 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 
 import { BooksComponent } from './components/books/books.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 import { UserBooksComponent } from './components/user-books/user-books.component';
 import { UserFavBooksComponent } from './components/user-fav-books/user-fav-books.component';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:"books", component:BooksComponent},
   {path:"books/:filterText", component:BooksComponent},
   {path:"login", component:LoginComponent},
+  {path:"register", component:RegisterComponent},
   {path:'bookDetail/:id',component:BookDetailsComponent},
   {path:'books/:filterText', component:BooksComponent},
   {path:'userFavBooks', component:UserFavBooksComponent},

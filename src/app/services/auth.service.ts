@@ -1,3 +1,4 @@
+import { RegisterModel } from './../models/registerModel';
 import { Observable } from 'rxjs';
 import { TokenModel } from './../models/tokenModel';
 import { HttpClient } from '@angular/common/http';
@@ -14,6 +15,10 @@ export class AuthService {
 
   login(loginModel:loginModel):Observable<TokenModel>{
     return this.httpClient.post<TokenModel>(this.apiUrl+"Login",loginModel)
+  }
+
+  register(registerModel:RegisterModel):Observable<TokenModel>{
+    return this.httpClient.post<TokenModel>(this.apiUrl+"Register",registerModel)
   }
 
   isAuthenticated(){

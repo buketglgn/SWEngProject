@@ -48,6 +48,7 @@ export class BooksComponent implements OnInit {
     //let bookfavv= Object.assign({},bookid)
     this.userFavBookService.addToFavBooks(bookid).subscribe(response=>{
       this.toastrService.success("Favorilere Eklendi")
+      
     },(responseError)=>{
       this.toastrService.error(responseError.error.errors);
       console.log(responseError.error.errors)

@@ -17,7 +17,8 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserFavBooksComponent } from './components/user-fav-books/user-fav-books.component';
-import { UserBooksComponent } from './components/user-books/user-books.component'
+import { UserBooksComponent } from './components/user-books/user-books.component';
+import { RegisterComponent } from './components/register/register.component'
 
 
 
@@ -33,6 +34,7 @@ import { UserBooksComponent } from './components/user-books/user-books.component
     BookDetailsComponent,
     UserFavBooksComponent,
     UserBooksComponent,
+    RegisterComponent,
    
   ],
   imports: [

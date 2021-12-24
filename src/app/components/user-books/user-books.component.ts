@@ -30,7 +30,7 @@ export class UserBooksComponent implements OnInit {
       console.log(response)
      },(responseError)=>{
        this.toastrService.error(responseError.error.errors);
-       console.log(responseError.error.errors)
+       //console.log(responseError.error.errors)
      });
   }
   deleteUserBook(bookid:number){
@@ -39,7 +39,7 @@ export class UserBooksComponent implements OnInit {
        window.location.reload();
     },(responseError)=>{
       this.toastrService.error(responseError.error.errors);
-      console.log(responseError.error.errors)
+      //console.log(responseError.error.errors)
     });
   
     
