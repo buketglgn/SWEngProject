@@ -51,7 +51,7 @@ export class BooksComponent implements OnInit {
       
     },(responseError)=>{
       this.toastrService.error(responseError.error.errors);
-      console.log(responseError.error.errors)
+      //console.log(responseError.error.errors)
     });
   }
  addToUserBooks(bookid:number){
@@ -59,7 +59,7 @@ export class BooksComponent implements OnInit {
      this.toastrService.success("okunanlara eklendi")
    },(responseError)=>{
     this.toastrService.error(responseError.error.errors);
-    console.log(responseError.error.errors)
+    //console.log(responseError.error.errors)
   });
    
  }

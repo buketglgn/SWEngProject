@@ -18,7 +18,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserFavBooksComponent } from './components/user-fav-books/user-fav-books.component';
 import { UserBooksComponent } from './components/user-books/user-books.component';
-import { RegisterComponent } from './components/register/register.component'
+import { RegisterComponent } from './components/register/register.component';
+import { FooterComponent } from './components/footer/footer.component'
 
 
 
@@ -35,6 +36,7 @@ import { RegisterComponent } from './components/register/register.component'
     UserFavBooksComponent,
     UserBooksComponent,
     RegisterComponent,
+    FooterComponent,
    
   ],
   imports: [
