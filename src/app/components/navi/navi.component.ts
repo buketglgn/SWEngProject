@@ -14,14 +14,21 @@ export class NaviComponent implements OnInit {
   filterText=""
 
   message:string="";
+  userName:string
 
   constructor(private data:DataService,
-    private authService:AuthService,
+    public authService:AuthService,
     private toastrService:ToastrService) { }
 
   ngOnInit(): void {
     this.data.currentMessage.subscribe(message=> this.message = message)
+    this.getUserName()
     
+  }
+  getUserName(){
+    this.authService.getUserName().subscribe(response=>{
+      this.userName=response
+    })
   }
 
   newMessage(){
