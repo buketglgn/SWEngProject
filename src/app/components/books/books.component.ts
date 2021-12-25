@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { ToastrService } from 'ngx-toastr';
 import { UserFavBooksService } from '../../services/user-books.service';
 import { DataService } from './../../services/data.service';
@@ -26,7 +27,8 @@ export class BooksComponent implements OnInit {
   constructor(private bookService:BookService,
     private data: DataService, private router:ActivatedRoute,
     private userFavBookService:UserFavBooksService,
-    private toastrService:ToastrService) { }
+    private toastrService:ToastrService,
+     private authService:AuthService) { }
 
   ngOnInit(): void {
     this.data.currentMessage.subscribe(message => this.message = message)
@@ -63,6 +65,14 @@ export class BooksComponent implements OnInit {
   });
    
  }
+ isAuthentication(){
+  if(this.authService.isAuthenticated()){
+    return true
+  }else{
+    return false
+  }
+  
+}
 
 
 

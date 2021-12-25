@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { DataService } from './../../services/data.service';
 
 import { Component, OnInit } from '@angular/core';
@@ -21,7 +22,8 @@ export class BookDetailsComponent implements OnInit {
       private bookService:BookService,
        private data1:DataService,
        private userFavBookService:UserFavBooksService,
-       private toastrService:ToastrService) { }
+       private toastrService:ToastrService,
+       private authService:AuthService) { }
 
   ngOnInit(): void {
     this.data=this.router.snapshot.params['id']
@@ -64,5 +66,13 @@ export class BookDetailsComponent implements OnInit {
   });
    
  }
+ isAuthentication(){
+  if(this.authService.isAuthenticated()){
+    return true
+  }else{
+    return false
+  }
+  
+}
 
 }
