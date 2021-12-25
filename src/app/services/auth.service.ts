@@ -44,6 +44,7 @@ export class AuthService {
     this.token = localStorage.getItem("token");
     let decodedToken = this.jwtHelper.decodeToken(this.token);
  
-    this.email=decodedToken['email'];
+     let email=decodedToken['email'];
+    this.email=email.split('@')[0]
   }
 }

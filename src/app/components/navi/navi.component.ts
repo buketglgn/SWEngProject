@@ -23,8 +23,13 @@ export class NaviComponent implements OnInit {
   ngOnInit(): void {
     this.data.currentMessage.subscribe(message=> this.message = message)
     this.getUserName()
+    // if(this.isAuthentication()){
+    //   this.authService.userDetailFromToken();  
+    // } 
     
   }
+
+  
   getUserName(){
     this.authService.getUserName().subscribe(response=>{
       this.userName=response
