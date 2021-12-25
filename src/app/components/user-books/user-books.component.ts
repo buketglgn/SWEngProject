@@ -27,7 +27,7 @@ export class UserBooksComponent implements OnInit {
     this.userFavBooksService.getBooks().subscribe(response=>{
       this.userFavBookResponseModel=response
       
-      console.log(response)
+      //console.log(response)
      },(responseError)=>{
        this.toastrService.error(responseError.error.errors);
        //console.log(responseError.error.errors)

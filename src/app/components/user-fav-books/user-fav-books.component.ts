@@ -43,7 +43,7 @@ export class UserFavBooksComponent implements OnInit {
     this.userFavBooksService.getFavBooks().subscribe(response=>{
       this.userFavBookResponseModel=response
       
-      console.log(response)
+      //console.log(response)
      },(responseError)=>{
        this.toastrService.error(responseError.error.errors);
        //console.log(responseError.error.errors)
@@ -60,6 +60,14 @@ export class UserFavBooksComponent implements OnInit {
     });
   
     
+  }
+  addToUserBooks(bookid: number) {
+    this.userFavBooksService.addToUserBooks(bookid).subscribe(response => {
+      this.toastrService.success("okunanlara eklendi")
+    }, (responseError) => {
+      this.toastrService.error(responseError.error.errors);
+      //console.log(responseError.error.errors)
+    });
   }
   
 
