@@ -1,0 +1,15 @@
+header{
+    margin:0px;
+}
+.custom-color{
+    background-color:rgb(46, 45, 44);
+    margin-right: 25px;
+}
+
+.custom-color:hover{
+    background-color: rgba(46, 45, 44, 0.445);
+}
+.shad{
+    
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
