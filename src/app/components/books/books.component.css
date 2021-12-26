@@ -17,11 +17,11 @@
 
 }
 .card-body{
-    background-color:  rgb(210, 216, 183);
+    border: 1px solid rgba(160, 165, 139, 0.822);;
     border-radius: 0.25rem;
-    background-color:  rgba(160, 165, 139, 0.822);
+    /* background-color:  rgba(160, 165, 139, 0.822); */
     padding-bottom: 15px;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19); */
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19); 
     padding: 20px;
     margin-bottom: 15px;
 }
