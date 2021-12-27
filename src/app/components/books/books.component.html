@@ -1,24 +1,19 @@
-<div>
+
 
 <div class="row">
- 
-    <div  class="card custom-margin" style="    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" 
-    *ngFor="let book of books | searchBook:message">
+    <div  class="card custom-margin" *ngFor="let book of books | searchBook:message">
       <img class="card-img-top" src="https://www.gutenberg.org/cache/epub/{{book.id}}/pg{{book.id}}.cover.medium.jpg" 
       alt="...">
       <div class="card-body">
-
-        <h6 class="card-title"  >Book number: {{book.id}}</h6>
+        <p class="card-title"  >Book number: {{book.id}}</p>
         <p class="card-text" ><b>Book Name: </b>{{book.title}}</p>
         <p class="card-text" *ngFor="let author of book.authors"><b>Author :</b> {{author.name}}</p>
-       <div class="row">
-       <div class="col-md"> <a href="https://www.gutenberg.org/ebooks/{{book.id}}.html.images" (click)="addToUserBooks(book.id)"  target="blank" class="btn custom-col text-light   ">Oku</a></div>
-      <div class="col-md"> <button (click)="newMessage()" routerLink="/bookDetail/{{book.id}}"  class="btn btn-dark" >Detay</button></div></div>
+       <div class="btn-vertical">
+       <a href="https://www.gutenberg.org/ebooks/{{book.id}}.html.images" (click)="addToUserBooks(book.id)"  target="blank" class="btn bg-secondary text-light btn-sm">Oku</a>
+       <button (click)="newMessage()" routerLink="/bookDetail/{{book.id}}"  class="btn cus-col btn-sm text-light" >Detay</button></div>
 
       <div class="col-md" *ngIf="isAuthentication()">
-         <button (click)="addToFavBooks(book.id)" class="btn btn-dark" >Favori</button></div></div>
+         <button (click)="addToFavBooks(book.id)" class="btn cus-col btn-sm" >Favori</button></div></div>
       
       </div>
-
     </div>
-  </div>

@@ -2,14 +2,30 @@ header{
     margin:0px;
 }
 .custom-color{
-    background-color:rgb(46, 45, 44);
-    margin-right: 25px;
+    background-color:rgba(48, 49, 51, 0.801);
+    margin-right: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .custom-color:hover{
-    background-color: rgba(46, 45, 44, 0.445);
+    background-color: rgb(34, 32, 31);
+    font-size: larger;
 }
 .shad{
-    
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#textfil{
+}
+#textfill2{
+    float: right !important;
+}
+#baslik{
+    margin-left:15px;
+    text-decoration-style: none;
+}
+#baslik:hover{
+    font-size:x-large;
+    font-weight:400;
+    color: white!important;
 }

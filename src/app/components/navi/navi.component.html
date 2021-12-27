@@ -1,23 +1,22 @@
 
 
-<header class="navbar navbar flex-md-nowrap p-0 shadow" 
- style="background-color: rgb(133, 110, 102); height: 70px; 
+<header class="navbar navbar flex-md-nowrap p-0 shadow bg-secondary" 
+ style=" height: 70px; 
 
    ">
     
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 text-light" href="#" routerLink="books">GutenBerg Project</a>
+    <a id="baslik"class="navbar-brand col-md-3 col-lg-2 me-0 px-3 text-light"href="#" routerLink="books">GutenBerg Project</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed"
      type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" 
      aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div>
-     <input id="textfil" style="width: 550px;" [(ngModel)]="filterText" class="form-control form-control-dark shad" type="text"
+    <div class="btn-group">
+     <input id="textfil" style="width: 350px;" [(ngModel)]="filterText" class="form-control form-control-dark shad" type="text"
     placeholder="Search" aria-label="Search" >
-</div>
-
-     <button onclick="document.getElementById('textfil').value = ''" class="btn custom-color" type="submit"(click)="newMessage()" routerLink=""><a class="text-light">Search</a>
-      </button> 
+  <button onclick="document.getElementById('textfil').value = ''" class="btn custom-color" if="text-fill2" type="submit"(click)="newMessage()" routerLink=""style="  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  "><a class="text-light">Search</a>
+      </button> </div>
     <div class="navbar-nav">
       <div class="nav-item text-nowrap" *ngIf="isAuthentication(); else noAuthentication">
         <h6>Welcome , {{userName}}</h6>
@@ -27,7 +26,7 @@
       </div>
       <ng-template #noAuthentication>
       <div class="nav-item text-nowrap" >
-        <button type="button" class="btn custom-color" routerLink="/login" style="margin-right: 15px;"><a class="text-light">Login</a></button>
+        <button type="button" class="btn custom-color" routerLink="/login" ><a class="text-light">Login</a></button>
         <button type="button" class="btn custom-color" routerLink="/register"><a class="text-light">Register</a></button>
         
         </div>

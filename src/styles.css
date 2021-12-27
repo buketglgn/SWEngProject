@@ -3,4 +3,6 @@
 @import "~font-awesome/css/font-awesome.min.css"
 
 
-
+*{
+    font-family: 'Lato', sans-serif;
+}

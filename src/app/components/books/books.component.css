@@ -1,23 +1,26 @@
 .custom-margin{
-    margin-left: 20px;
+    margin-left: 25px;
     margin-right: 20px;
-    margin-bottom: 20px;
-    width: 15rem; height:auto;
-    background-color:  rgb(210, 216, 183);
+    margin-bottom: 35px;
+    width: 16rem; height:auto;
+    /* background-color:  rgb(210, 216, 183); */
+    background-color:#e5e9ec ;
     padding-left: 25px;
     padding-right: 25px;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card-img-top{
-    margin-top: 30px;
-    width: 120px;
-    height: 160px;
-    margin-left: 30px;
+    margin-top: 20px;
+    width: 90px;
+    height: 120px;
+    margin-left: 50px;
     margin-bottom: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    
 }
 .card-body{
-    border: 1px solid rgba(160, 165, 139, 0.822);;
+    border: 1px solid #e5e9ec;
     border-radius: 0.25rem;
     /* background-color:  rgba(160, 165, 139, 0.822); */
     padding-bottom: 15px;
@@ -28,4 +31,17 @@
 .custom-col{
     
   background-color: rgb(97, 79, 73);
+}
+p{
+    font-size: small;
+}
+.cus-col{
+    background-color:rgb(48, 49, 51);
+}
+.btn-vertical{
+    margin-left: 12px;
+    align-items: center!important;
+}
+.btn{
+    margin-left: 10px;
 }
