@@ -10,12 +10,10 @@ header{
 
 .custom-color:hover{
     background-color: rgb(34, 32, 31);
-    font-size: larger;
+    color: white!important;
 }
 .shad{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#textfil{
 }
 #textfill2{
     float: right !important;

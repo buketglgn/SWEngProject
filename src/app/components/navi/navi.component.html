@@ -20,7 +20,7 @@
     <div class="navbar-nav">
       <div class="nav-item text-nowrap" *ngIf="isAuthentication(); else noAuthentication">
         <h6>Welcome , {{userName}}</h6>
-        <button type="button" class="btn btn-success"(click)="logout()" routerLink="/books">
+        <button type="button" class="btn custom-color"(click)="logout()" routerLink="/books">
           Log Out</button>
        
       </div>
